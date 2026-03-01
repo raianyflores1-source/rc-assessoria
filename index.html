@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RC Assessoria | Recursos Humanos & Conformidades</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: linear-gradient(135deg, #0a0a3c, #3c35b4);
+    color: white;
+  }
+
+  header {
+    text-align: center;
+    padding: 80px 20px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  .logo {
+    max-width: 250px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 42px;
+    font-weight: 700;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    margin-top: 15px;
+    opacity: 0.9;
+  }
+
+  .cta {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 15px 35px;
+    background: gold;
+    color: #0a0a3c;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .cta:hover {
+    transform: scale(1.05);
+    background: #ffd700;
+  }
+
+  section {
+    padding: 70px 20px;
+    text-align: center;
+  }
+
+  /* Serviços */
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .card h3 {
+    color: gold;
+    margin-bottom: 15px;
+  }
+
+  /* Resultados */
+  #resultados {
+    padding: 70px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 900px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  .counters {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .counter {
+    flex: 1 1 180px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    transition: transform 0.3s;
+  }
+
+  .counter:hover {
+    transform: scale(1.1);
+  }
+
+  .number {
+    font-size: 48px;
+    font-weight: 700;
+    color: gold;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .counter p {
+    font-size: 18px;
+    color: white;
+  }
+
+  /* Formulário */
+  form {
+    max-width: 500px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  input,
+  textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+  }
+
+  button {
+    padding: 15px;
+    background: gold;
+    color: #0a0a3c;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: #ffd700;
+    transform: scale(1.05);
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.7;
+  }
+
+  /* WhatsApp botão */
+  .whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 15px 18px;
+    border-radius: 50%;
+    font-size: 22px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite;
+  }
+
+  /* Animações */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+  }
+
+  /* Responsividade */
+  @media (max-width: 600px) {
+    .services {
+      grid-template-columns: 1fr;
+    }
+    .counters {
+      flex-direction: column;
+      gap: 25px;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <header>
+    <img src="logo.png" class="logo" alt="RC Assessoria Logo" />
+    <h1>Assessoria de Recursos Humanos e Conformidades</h1>
+    <p class="subtitle">Soluções estratégicas para sua empresa crescer com segurança.</p>
+    <a href="#contato" class="cta">Solicitar Atendimento</a>
+  </header>
+
+  <section>
+    <h2>Nossos Serviços</h2>
+
+    <div class="services">
+      <div class="card">
+        <h3>Gestão de RH</h3>
+        <p>Recrutamento, seleção, treinamento e desenvolvimento de equipe.</p>
+      </div>
+
+      <div class="card">
+        <h3>Conformidade Trabalhista</h3>
+        <p>Regularização, auditoria e prevenção de riscos trabalhistas.</p>
+      </div>
+
+      <div class="card">
+        <h3>Consultoria Empresarial</h3>
+        <p>Planejamento estratégico e organização interna eficiente.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resultados">
+    <h2>Nossos Resultados</h2>
+    <div class="counters">
+      <div class="counter">
+        <span class="number" data-target="150">0</span>
+        <p>Empresas Atendidas</p>
+      </div>
+      <div class="counter">
+        <span class="number" data-target="1200">0</span>
+        <p>Horas de Consultoria</p>
+      </div>
+      <div class="counter">
+        <span class="number" data-target="98">0</span>
+        <p>% de Satisfação</p>
+      </div>
+      <div class="counter">
+        <span class="number" data-target="45">0</span>
+        <p>Projetos Concluídos</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Fale Conosco</h2>
+
+    <form action="https://formsubmit.co/rcruz.03@outlook.com" method="POST">
+      <input type="text" name="name" placeholder="Seu Nome" required />
+      <input type="email" name="email" placeholder="Seu Email" required />
+      <textarea name="message" rows="4" placeholder="Sua Mensagem" required></textarea>
+
+      <input type="hidden" name="_captcha" value="false" />
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </section>
+
+  <footer>© 2026 RC Assessoria | Todos os direitos reservados</footer>
+
+  <a href="https://wa.me/5522988396321" class="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+    💬
+  </a>
+
+  <script>
+    const counters = document.querySelectorAll('.number');
+    const speed = 200; // velocidade da contagem
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+
+        const increment = target / speed;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      const isInViewport = (el) => {
+        const rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+      };
+
+      let started = false;
+      window.addEventListener('scroll', () => {
+        if (!started && isInViewport(counter)) {
+          updateCount();
+          started = true;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
